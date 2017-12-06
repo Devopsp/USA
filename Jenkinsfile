@@ -8,7 +8,8 @@ properties([
       threshold: 'SUCCESS',
       upstreamProjects: 'https://github.com/Devopsp/Canada.git'
     )
-        githubPush()])
+        #githubPush()
+    ])
 ])
 
 pipeline {
