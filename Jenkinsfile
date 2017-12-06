@@ -6,7 +6,7 @@ properties([
     pipelineTriggers([
         upstream(
       threshold: 'SUCCESS',
-      upstreamProjects: '../jobA/master'
+      upstreamProjects: 'https://github.com/Devopsp/Canada.git'
     )
         githubPush()])
 ])
