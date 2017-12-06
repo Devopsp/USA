@@ -3,7 +3,13 @@ properties([
     [$class: 'GithubProjectProperty',
     displayName: '',
     projectUrlStr: 'https://github.com/Devopsp/USA/'],
-    pipelineTriggers([githubPush()])])
+    pipelineTriggers([
+        upstream(
+      threshold: 'SUCCESS',
+      upstreamProjects: '../jobA/master'
+    )
+        githubPush()])
+])
 
 pipeline {
     agent any 
